@@ -1,0 +1,7 @@
+{
+  "name": "ap5pmProjekt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
