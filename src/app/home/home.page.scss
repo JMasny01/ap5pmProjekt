@@ -25,3 +25,38 @@
 #container a {
   text-decoration: none;
 }
+
+.searchBar{
+  --ion-background-color: #3dc2ff; /* Barva pozadí karty */
+  color: white;
+}
+.cardStyle {
+  border-radius: 20px;
+  --ion-background-color: #3dc2ff; /* Barva pozadí karty */
+
+  span{
+    color: white;
+    font-weight: 300;
+  }
+
+  #temp{
+    font-weight: 300;
+    font-size: 4em;
+    margin: 5px;
+
+  }
+
+  #locationIcon{
+    color: #F6B844
+  }
+  #date{
+    color: #F6B844
+  }
+
+}
+
+.noData{
+  margin:50px;
+  display:flex;
+  justify-content: center;
+}
