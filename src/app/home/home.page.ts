@@ -22,9 +22,11 @@ const API_KEY = environment.API_KEY;
 export class HomePage {
   weatherTemp: any;
   todayDate = new Date()
-  cityName :any
-  weatherIcon:any
-  weatherDetails:any
+  cityName :any;
+  weatherIcon:any;
+  weatherDetails:any;
+  pressure:any;
+
   name=""
   loading= true
   constructor(public httpClient: HttpClient) {
@@ -42,6 +44,8 @@ export class HomePage {
           console.log(this.weatherDetails);
           this.weatherIcon = `https://openweathermap.org/img/wn/${this.weatherDetails.icon}@4x.png`
           console.log(this.weatherTemp);
+          console.log(this.pressure);
+
           this.loading = false
         }
       },

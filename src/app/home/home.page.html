@@ -1,9 +1,12 @@
 <!--<ion-header [translucent]="true"> -->
 
 <ion-content [fullscreen]="true">
-  <div style="text-align: center;margin: 15px;">
-   <ion-label style="font-weight: 400; font-size: 1.5em;">Weather Forecast</ion-label>
-  </div>
+  <div style="text-align: center; margin: 15px;">
+  <ion-button [routerLink]="['/landing']">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-button>
+  <ion-label style="font-weight: 400; font-size: 1.5em;">Weather Forecast</ion-label>
+</div>
   <ion-searchbar [(ngModel)]="cityName" (ngModelChange)="loadData()" placeholder="Search for city" class="searchBar" animated></ion-searchbar>
   <div *ngIf="!loading">
     <ion-card class="cardStyle">
@@ -44,11 +47,18 @@
       <span slot="end">{{weatherTemp.humidity}}%</span>
     </ion-item>
 
+    <ion-item>
+      <span>Pressure</span>
+      <span slot="end">{{weatherTemp.pressure}}hPa</span>
+    </ion-item>
+
   </ion-card>
 </div>
 <div *ngIf="loading" class="noData">
   <img src="../../assets/pic2.png"/>
 
 </div>
+
+
 
 </ion-content>
